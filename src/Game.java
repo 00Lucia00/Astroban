@@ -1,10 +1,15 @@
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class Game {
     Scanner scan = new Scanner(System.in);
+    characters ca = new characters();
+
     void gameOperator(){
         int nrInput;
         do{
+            System.out.println();
             System.out.println("....Welcome to Astroban....");
             System.out.println(".......maka a choice.......");
             System.out.println("1.Play.....................");
@@ -22,12 +27,47 @@ public class Game {
                     System.out.println("press [S] for solo or [C] for co-pilot");
                     String input = scan.nextLine();
                     if(input.equals("S") || input.equals("s")){
-                        System.out.println("Astrocat is flying solo today");
+                        System.out.println("Astrocat is flying solo today\n");
                         //sätt in spel funktion här
                     }
                     else if (input.equals("C") || input.equals("c")){
-                        System.out.println("Astrocat has a co-pilot");
+                        System.out.println("Astrocat has a co-pilot\n");
                         // och här, fast för två spelare
+                    }
+                    System.out.println("what level do you want to play\n" +
+                            "Level [1] " + "Level [2]");
+                    input = scan.nextLine();
+                    if (input.equals("1")){
+                        boolean goBack = true;
+                        while(goBack) {
+                            //print
+                            List<String> lives = Arrays.asList(ca.heart, ca.heart, ca.heart, ca.heart, ca.heart, ca.heart, ca.heart, ca.heart, ca.heart);
+                            Map map = new Map();
+                            map.PrintMap(map.karta1());
+                            System.out.println("LIVES LEFT:");
+                            System.out.println(lives);
+                            System.out.println("Enter move here: ");
+                            input = scan.nextLine();
+                            if (input.equals("b") || input.equals("B")) {
+                                goBack = false;
+                            }
+                        }
+                    }
+                    if(input.equals("2")){
+                        boolean goBack = true;
+                        while(goBack) {
+                            //print
+                            List<String> lives = Arrays.asList(ca.heart, ca.heart, ca.heart, ca.heart, ca.heart, ca.heart, ca.heart, ca.heart, ca.heart);
+                            Map map = new Map();
+                            map.PrintMap(map.karta2());
+                            System.out.println("LIVES LEFT:");
+                            System.out.println(lives);
+                            System.out.println("Enter move here: ");
+                            input = scan.nextLine();
+                            if (input.equals("b") || input.equals("B")) {
+                                goBack = false;
+                            }
+                        }
                     }
                     break;
                 case 2:
@@ -72,6 +112,7 @@ public class Game {
                     break;
             }
         }while(nrInput != 4);
+        
     }
 
 }

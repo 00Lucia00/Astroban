@@ -2,6 +2,7 @@
 //lånad klass från niklas med kart funktioner
 import java.util.ArrayList;
     public class Map {
+
         String[][] map =
                 {
                         new String[] { ".", ".", ".", ".", ".", ".", ".", ".", ".", "." },
@@ -58,5 +59,42 @@ import java.util.ArrayList;
             }
             return map[y][x];
         }
+
+        String[][] karta1() {
+            characters ca = new characters();
+            //array map  1
+            String[][] a = {
+                            new String[]{"｡", "˚", ca.bcube, ca.bcube, ca.bcube, ca.bcube, ca.bcube, "｡"},
+                            new String[]{ca.bcube, ca.bcube, ca.bcube, " ", " ", " ", ca.bcube, "˚"},
+                            new String[]{ca.bcube, ca.star, ca.cat, ca.ccir, " ", " ", ca.bcube, "｡"},
+                            new String[]{ca.bcube, ca.bcube, ca.bcube, " ", ca.gcir, ca.star, ca.bcube, "˚"},
+                            new String[]{ca.bcube, ca.star, ca.bcube, ca.bcube, ca.wcir, " ", ca.bcube, "｡"},
+                            new String[]{ca.bcube, " ", ca.bcube, " ", ca.star, " ", ca.bcube, ca.bcube},
+                            new String[]{ca.bcube, ca.ccir, " ", ca.gcir, ca.wcir, ca.ccir, ca.star, ca.bcube},
+                            new String[]{ca.bcube, ca.rat, " ", " ", ca.star, " ", " ", ca.bcube},
+                            new String[]{ca.bcube, ca.bcube, ca.bcube, ca.bcube, ca.bcube, ca.bcube, ca.bcube, ca.bcube}
+
+            };
+            return a;
+        }
+       String[][] karta2(){
+           characters ca = new characters();
+           //array map 2
+           String[][] b = {
+                           new String[] { "｡", "˚", "｡", "˚", ca.bcube, ca.bcube, ca.bcube, ca.bcube, ca.bcube, "｡", "˚", "｡", "˚", "｡", "˚", "｡", "˚", "｡", "˚", "｡", "˚", "｡" },
+                           new String[] { "｡", "˚", "｡", "˚", ca.bcube, " ", " ", " ", ca.bcube, "｡", "˚", "｡", "˚", "｡", "˚", "｡", "˚", "｡", "˚", "｡", "˚", "｡" },
+                           new String[] { "｡", "˚", "｡", "˚", ca.bcube, ca.gcir, " ", " ", ca.bcube, "｡", "˚", "｡", "˚", "｡", "˚", "｡", "˚", "｡", "˚", "｡", "˚", "｡" },
+                           new String[] { "｡", "˚", ca.bcube, ca.bcube, ca.bcube, " ", " ", ca.ccir, ca.bcube, ca.bcube, ca.bcube, "｡", "˚", "｡", "˚", "｡", "˚", "｡", "˚", "｡", "˚", "｡" },
+                           new String[] { "｡", "˚", ca.bcube, " ", " ", ca.wcir, " ", " ", ca.gcir, " ", ca.bcube, "｡", "˚", "｡", "˚", "｡", "˚", "｡", "˚", "｡", "˚", "｡" },
+                           new String[] { ca.bcube, ca.bcube, ca.bcube, " ", ca.bcube, " ", ca.bcube, ca.bcube, ca.bcube, " ", ca.bcube, "｡", "˚", "｡", "˚", "｡", ca.bcube, ca.bcube, ca.bcube, ca.bcube, ca.bcube, ca.bcube },
+                           new String[] { ca.bcube, " ", " ", " ", ca.bcube, " ", ca.bcube, ca.bcube, ca.bcube, " ", ca.bcube, ca.bcube, ca.bcube, ca.bcube, ca.bcube, ca.bcube, ca.bcube, " ", " ", ca.star, ca.star, ca.bcube },
+                           new String[] { ca.bcube, " ", ca.ccir, " ", " ", ca.wcir, " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", ca.star, ca.star, ca.bcube },
+                           new String[] { ca.bcube, ca.bcube, ca.bcube, ca.bcube, ca.bcube, " ", ca.bcube, ca.bcube, ca.bcube, ca.bcube, " ", ca.bcube, ca.cat, ca.bcube, ca.bcube, ca.bcube, ca.bcube, " ", " ", ca.star, ca.star, ca.bcube },
+                           new String[] { "｡", "˚", "｡", "˚", ca.bcube, " ", " ", ca.rat, " ", " ", " ", ca.bcube, ca.bcube, ca.bcube, "｡", "˚", ca.bcube, ca.bcube, ca.bcube, ca.bcube, ca.bcube, ca.bcube },
+                           new String[] { "｡", "˚", "｡", "˚", ca.bcube, " ", " ", " ", " ", " ", " ", ca.bcube,"｡", "˚", "｡", "˚", "｡", "˚", "｡", "˚", "｡", "˚" },
+                           new String[] { "｡", "˚", "｡", "˚", ca.bcube, ca.bcube, ca.bcube, ca.bcube, ca.bcube, ca.bcube, ca.bcube, ca.bcube, "｡", "˚", "｡", "˚", "｡", "˚", "｡", "˚", "｡", "˚" },
+           };
+           return b;
+       }
     }
 
