@@ -5,12 +5,12 @@ public class Game {
     void gameOperator(){
         int nrInput;
         do{
-            System.out.println("..Welcome to Astroban..");
-            System.out.println(".....maka a choice.....");
-            System.out.println("1.Play.................");
-            System.out.println("2.High-Score...........");
-            System.out.println("3.Rules................");
-            System.out.println("4.Quit.................");
+            System.out.println("....Welcome to Astroban....");
+            System.out.println(".......maka a choice.......");
+            System.out.println("1.Play.....................");
+            System.out.println("2.High-Score...............");
+            System.out.println("3.Rules....................");
+            System.out.println("4.Quit.....................");
 
             nrInput = scan.nextInt();
             scan.nextLine(); // stoppar programmet från att hoppa vidare, måste skrivas direkt efter (nextInt)
@@ -31,14 +31,21 @@ public class Game {
                     }
                     break;
                 case 2:
-                    System.out.println("........High-Score......."); // gör en funktion som skriver ut och sparar info
-                    System.out.println("..........Top 5..........");
-                    System.out.println("1.Ligia..................");
-                    System.out.println("2.Jennie.................");
-                    System.out.println("3.Sanne..................");
-                    System.out.println("4.Helia..................");
-                    System.out.println("5.Lucia..................");
-                    System.out.println("press R to return to menu");
+                    boolean goBack = true;
+                    while(goBack) {
+                        System.out.println("........High-Score......."); // gör en funktion som skriver ut och sparar info
+                        System.out.println("..........Top 5..........");
+                        System.out.println("1.Ligia..................");
+                        System.out.println("2.Jennie.................");
+                        System.out.println("3.Sanne..................");
+                        System.out.println("4.Helia..................");
+                        System.out.println("5.Lucia..................");
+                        System.out.println("press R to return to menu");
+                        String input2 = scan.nextLine();
+                        if (input2.equals("R") || input2.equals("r")) {
+                            goBack = false;
+                        }
+                    }
                     break;
                 case 3:
                     System.out.println("..................................Rules.........................................");
