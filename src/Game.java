@@ -89,7 +89,7 @@ public class Game {
                     break;
                 case 3:
                     System.out.println("..................................Rules.........................................");
-                    System.out.println("Welcome, Astrocat! \n" +
+                    System.out.println("Welcome, Astrocat!\n" +
                             "Your mission is to prevent the villain Darth Mouse from taking a bite of the moon.\n" +
                             "You need to push satellites around the moon, trying to get them to the right position.\n" +
                             "The satellites need to get into position too form a shield to protect the moon.\n" +
@@ -102,17 +102,26 @@ public class Game {
                             "•\tYou cannot push the planets trough walls or other planets.\n" +
                             "•\tYou cannot move through a wall.\n" +
                             "•\tThe level is solved when all satellites are placed at the right spot.\n    It does not matter what satellite is placede at the marked location\n");
+                    System.out.println(ca.cat + " = Player");
+                    System.out.println(ca.rat + " = Enemy");
+                    System.out.println(ca.bcube + " = wall");
+                    System.out.println(ca.ccir + " = satellite " );
+                    System.out.println(ca.star + " = correct position marker" );
+                    System.out.println(color.ANSI_GREEN + "w" + color.ANSI_RESET + " = up \n" +
+                            color.ANSI_GREEN + "s" + color.ANSI_RESET + " = down\n" +
+                            color.ANSI_GREEN + "d" + color.ANSI_RESET + " = right\n" +
+                            color.ANSI_GREEN + "a" + color.ANSI_RESET + " = left" );
 
                     break;
                 case 4:
-                    System.out.println("..........Astrocat has gone back to base.........");
+                    System.out.println(".......Astrocat has gone back to base.......");
                     break;
                 default:
-                    System.out.println("unvalide answer - try again - ");
+                    System.out.println("invalid answer - try again - ");
                     break;
             }
         }while(nrInput != 4);
-        
+
     }
 
 }

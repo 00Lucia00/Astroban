@@ -4,7 +4,7 @@ public class characters {
 
     String cat = color.ANSI_PURPLE + "ᗢ" + color.ANSI_RESET;
     String rat = color.ANSI_RED + "ᕐᐷ" + color.ANSI_RESET;
-    String blcube = color.ANSI_BLACK + "▄" + color.ANSI_RESET;
+    String blcube = color.ANSI_BLACK + "ᕐᐷ" + color.ANSI_RESET;
     String bcube = color.ANSI_BLUE + "▄" + color.ANSI_RESET;
     String ccube = color.ANSI_CYAN + "●" + color.ANSI_RESET;
     String pcube = color.ANSI_PURPLE + "▄" + color.ANSI_RESET;
