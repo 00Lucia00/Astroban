@@ -26,7 +26,7 @@ public class GameLogic {
             System.out.println("That's out of bounds!");
             return false;
         } else if (tile.equals(ca.bcube)) {
-            System.out.println("That's a wall!");
+            System.out.println(color.ANSI_RED + "Cats can't go through walls!" + color.ANSI_RESET);
             return false;
         } else if (tile.equals(ca.rat)) {
             System.out.println("You died :((");
@@ -44,7 +44,7 @@ public class GameLogic {
             System.out.println("That's out of bounds!");
             return false;
         } else if (tile.equals(ca.bcube)) {
-            System.out.println("That's a wall!");
+            System.out.println(color.ANSI_RED + "Cats can't go through walls!" + color.ANSI_RESET);
             return false;
         } else if (tile.equals(ca.rat)) {
             System.out.println("You died :((");
@@ -64,7 +64,7 @@ public class GameLogic {
             System.out.println("That's out of bounds!");
             return false;
         } else if (tile.equals(ca.bcube)) {
-            System.out.println("That's a wall!");
+            System.out.println(color.ANSI_RED + "Cats can't go through walls!" + color.ANSI_RESET);
             return false;
         } else if (tile.equals(ca.rat)) {
             System.out.println("You died :((");
@@ -84,9 +84,9 @@ public class GameLogic {
             System.out.println("That's out of bounds!");
             return false;
         } else if (tile.equals(ca.bcube)) {
-            System.out.println("That's a wall!");
+            System.out.println(color.ANSI_RED + "Cats can't go through walls!" + color.ANSI_RESET);
             return false;
-        } else if (tile.equals(ca.rat)) {
+        } else if (tile.equals(enemy)) {
             System.out.println("You died :((");
             // lägg in reset funktion
             return false;
@@ -97,22 +97,24 @@ public class GameLogic {
         gameObject.setY(gameObject.getY() + 1); // Move the object's x one step left.
         return true;
     }
-    boolean enemyMove(characters gameObject){
+
+    boolean enemyMove(characters gameObject) {
         String tile = map.ReturnTile(gameObject.getX() - 1, gameObject.getY());
         gameObject.setX(gameObject.getX() - 1); // Move the object's x one step left.
-        if(tile.equals("")){
-            for(int i = 0; i < 8; i++) {
+        if (tile.equals("")) {
+            for (int i = 0; i < 8; i++) {
                 tile = map.ReturnTile(gameObject.getX() + 1, gameObject.getY());
                 gameObject.setX(gameObject.getX() + 1);
             }
         }
         return true;
     }
-    void PlayerMove(){
+
+    void PlayerMove() {
         Scanner scan = new Scanner(System.in);
         boolean pressKey = true;
         while (pressKey) {
-            System.out.println("Moves made: "+ count +"\nEnter move here: ");
+            System.out.println("Moves made: " + count + "\nEnter move here: ");
             String input = scan.nextLine();
             if (input.equals("W") || input.equals("w")) {
                 count++;
@@ -134,13 +136,15 @@ public class GameLogic {
                 MoveLeft(player);
                 enemyMove(enemy);
                 map.PrintMap(objects);
-            }
-            else if (input.equals("b") || input.equals("B")) {
+            } else if (input.equals("B") || input.equals("b")) {
                 pressKey = false;
+
+            } else System.out.println(color.ANSI_RED + "CAAATastrophic choice - try again" + color.ANSI_RESET);
             }
         }
-
     }
-}
+
+
+
 
 
