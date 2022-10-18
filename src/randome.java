@@ -5,43 +5,33 @@ import java.util.Scanner;
 
 public class randome {
     Scanner scan = new Scanner(System.in);
+
     characters ca = new characters();
+    List<String> lives = Arrays.asList(ca.heart, ca.heart, ca.heart, ca.heart, ca.heart, ca.heart, ca.heart, ca.heart, ca.heart);
+
+
 
     void levelSelect(){
         System.out.println("What level do you want to play\n" +
                 "Level [1] " + "Level [2]");
         String input = scan.nextLine();
         if (input.equals("1")){
-            boolean goBack = true;
-            while(goBack) {
-                ArrayList<characters> objects = new ArrayList<characters>();
                 GameLogic g = new GameLogic();
                 //print
-                List<String> lives = Arrays.asList(ca.heart, ca.heart, ca.heart, ca.heart, ca.heart, ca.heart, ca.heart, ca.heart, ca.heart);
                 System.out.println("LIVES LEFT:");
                 System.out.println(lives);
-                System.out.println("Enter move here: ");
-                input = scan.nextLine();
-                if (input.equals("b") || input.equals("B")) {
-                    goBack = false;
-                }
-            }
+                g.PlayerMove(); // denna funkar, ni kan testa på den
+
+
+
         }
         if(input.equals("2")){
-            boolean goBack = true;
-            while(goBack) {
                 //print
-                List<String> lives = Arrays.asList(ca.heart, ca.heart, ca.heart, ca.heart, ca.heart, ca.heart, ca.heart, ca.heart, ca.heart);
-                Map map = new Map();
-                map.PrintMap(map.z);
+                Map map = new Map(); // den gör inte det
+                map.PrintMap(map.karta2());
                 System.out.println("LIVES LEFT:");
                 System.out.println(lives);
-                System.out.println("Enter move here: ");
-                input = scan.nextLine();
-                if (input.equals("b") || input.equals("B")) {
-                    goBack = false;
-                }
-            }
+
         }
     }
 
@@ -63,8 +53,8 @@ public class randome {
     void highScore(){
         boolean goBack = true;
         while(goBack) {
-            System.out.println("........High-Score......."); // gör en funktion som skriver ut och sparar info
-            System.out.println("..........Top 5..........");
+            System.out.println("........High-Score......."); // detta är bara utseende än så länge
+            System.out.println("..........Top 5..........");// gör en funktion som skriver ut och sparar info
             System.out.println("1.Ligia..................");
             System.out.println("2.Jennie.................");
             System.out.println("3.Sanne..................");
@@ -103,4 +93,5 @@ public class randome {
                 color.ANSI_GREEN + "a" + color.ANSI_RESET + " = left" );
 
     }
+
 }

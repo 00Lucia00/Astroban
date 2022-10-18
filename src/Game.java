@@ -23,9 +23,9 @@ public class Game {
 
             switch (nrInput){
                 case 1:
-                    System.out.println("Incoming transmission on CATCOM…");//gör funktion av detta
+                    System.out.println("Incoming transmission on CATCOM…");
                     System.out.println("Astrocat do you copy?...");
-                    r.coPilot();
+                    //r.coPilot(); - inte funktionabel än så länge
                     r.levelSelect();
                     break;
                 case 2:

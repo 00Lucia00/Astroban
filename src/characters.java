@@ -16,6 +16,19 @@ public class characters {
     String wcir = color.ANSI_WHITE + "●" + color.ANSI_RESET;
     String heart = color.ANSI_RED + "♥"  + color.ANSI_RESET;
 
+    private int x;
+    private int y;
+
+    private String mapMarker;
+    public characters(int x, int y, String mapMarker)
+    {
+        this.x = x;
+        this.y = y;
+        this.mapMarker = mapMarker;
+    }
+    public characters(){
+
+    }
     public String getCat() {
         return cat;
     }
@@ -68,27 +81,6 @@ public class characters {
         return heart;
     }
 
-    public void symbols(){
-
-    rat = color.ANSI_RED + "ᕐᐷ" + color.ANSI_RESET;
-    cat = color.ANSI_PURPLE + "ᗢ" + color.ANSI_RESET;
-    blcube = color.ANSI_BLACK + "▄" + color.ANSI_RESET;
-    bcube = color.ANSI_BLUE + "▄" + color.ANSI_RESET;
-    ccir = color.ANSI_CYAN + "●" + color.ANSI_RESET;
-    gcir = color.ANSI_GREEN + "●" + color.ANSI_RESET;
-    wcir = color.ANSI_WHITE + "●" + color.ANSI_RESET;
-    ccube = color.ANSI_CYAN + "●" + color.ANSI_RESET;
-    pcube = color.ANSI_PURPLE + "▄" + color.ANSI_RESET;
-    wcube = color.ANSI_WHITE + "▄" + color.ANSI_RESET;
-    rcube = color.ANSI_RED + "●" + color.ANSI_RESET;
-    star = color.ANSI_YELLOW + "★" + color.ANSI_RESET;
-    heart = color.ANSI_RED + "♥"  + color.ANSI_RESET;
-}
-    private int x;
-    private int y;
-
-    private String mapMarker;
-
     public int getX() {
         return x;
     }
@@ -113,13 +105,5 @@ public class characters {
         this.mapMarker = mapMarker;
     }
 
-    public characters(int x, int y, String mapMarker)
-    {
-        this.x = x;
-        this.y = y;
-        this.mapMarker = mapMarker;
-    }
-    public characters(){
 
-    }
 }
